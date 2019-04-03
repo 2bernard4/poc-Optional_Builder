@@ -23,14 +23,22 @@ public class Main {
                 .limit(5)
                 .collect(Collectors.toList()));
 
-        ////get ordenados alfabeticamente
+        ////get ordenados alfabeticamente y que devuelva el objeto
         List<Event> eventos_alfabeticamente = (events.stream()
                 .sorted(Comparator.comparing(Event::getName))
+                .collect(Collectors.toList()));
+
+        //ordenar alfabeticamente solo el nombre
+        List<String> eventos_alfabeticamente_string = (events.stream()
+                .sorted(Comparator.comparing(Event::getName))
+                .map(Event::getName)
                 .collect(Collectors.toList()));
 
         System.out.println(String.format("Primeros 5 ID: %s", primeros_5_id));
 
         System.out.println(String.format("Ordenados Alfabeticamente: %s", eventos_alfabeticamente));
+
+        System.out.println(String.format("Ordenados Alfabeticamente: %s", eventos_alfabeticamente_string));
 
 
 
