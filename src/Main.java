@@ -38,7 +38,7 @@ public class Main {
 
         System.out.println(String.format("Ordenados Alfabeticamente: %s", eventos_alfabeticamente));
 
-        System.out.println(String.format("Ordenados Alfabeticamente: %s", eventos_alfabeticamente_string));
+        System.out.println(String.format("Ordenados Alfabeticamente (solo String): %s", eventos_alfabeticamente_string));
 
 
 
